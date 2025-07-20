@@ -210,7 +210,7 @@ function CanvasViewerPage() {
       return;
     }
 
-    const socket = io("http://localhost:3030", {
+    const socket = io("https://virtual-whiteboard-app-1.onrender.com", {
       transports: ["websocket"],
       auth: { token },
     });

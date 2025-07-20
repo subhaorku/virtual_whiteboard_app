@@ -20,7 +20,7 @@ function CanvasListPage() {
       }
       try {
         setLoading(true);
-        const response = await fetch("http://localhost:3030/canvases", {
+        const response = await fetch("https://virtual-whiteboard-app-1.onrender.com/canvases", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -56,7 +56,7 @@ function CanvasListPage() {
     }
     try {
       setCreating(true);
-      const response = await fetch("http://localhost:3030/canvases", {
+      const response = await fetch("https://virtual-whiteboard-app-1.onrender.com/canvases", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -67,7 +67,7 @@ function CanvasListPage() {
       const data = await response.json();
       if (response.ok) {
         setNewCanvasName("");
-        const res = await fetch("http://localhost:3030/canvases", {
+        const res = await fetch("https://virtual-whiteboard-app-1.onrender.com/canvases", {
           method: "GET",
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -91,7 +91,7 @@ function CanvasListPage() {
     const token = localStorage.getItem("token");
     try {
       const response = await fetch(
-        `http://localhost:3030/canvases/share/${canvasId}`,
+        `https://virtual-whiteboard-app-1.onrender.com/canvases/share/${canvasId}`,
         {
           method: "PUT",
           headers: {
@@ -124,7 +124,7 @@ function CanvasListPage() {
       return;
     }
     try {
-      const response = await fetch(`http://localhost:3030/canvases/${canvasId}`, {
+      const response = await fetch(`https://virtual-whiteboard-app-1.onrender.com/canvases/${canvasId}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
