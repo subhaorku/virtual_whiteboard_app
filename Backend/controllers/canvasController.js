@@ -1,4 +1,4 @@
-const canvasModel = require ('../models/canvasModel');
+const canvasModel = require ('../Models/canvasModel')
 require('dotenv').config();
 
 const getAllCanvas = async (req, res) => {
