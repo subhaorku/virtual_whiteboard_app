@@ -7,7 +7,7 @@ const { Server } = require('socket.io');
 const http = require('http');
 const Canvas = require('./Models/canvasModel'); // ✅ import your canvas model
 const verifyToken = require('./utils/verifyToken');
-const User = require('./models/userModel'); // ✅ import your user model
+const User = require('./Models/userModel'); // ✅ import your user model
 const JWT_SECRET = process.env.JWT_SECRET
 
 const app = express();
